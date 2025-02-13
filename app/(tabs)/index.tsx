@@ -29,6 +29,14 @@ export default function Index() {
     }
   };
 
+  const onReset = () => {
+    setShowAppOptions(false);
+  };
+
+  const onAddSticker = () => {};
+
+  const onSaveImageAsync = () => {};
+
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -40,9 +48,9 @@ export default function Index() {
       {showAppOptions ? (
         <View style={styles.optionsContainer}>
           <View style={styles.optionsRow}>
-            <IconButton icon="refresh" label="Reset" onPress={() => alert()} />
-            <CircleButton onPress={() => alert()} />
-            <IconButton icon="save-alt" label="Save" onPress={() => alert()} />
+            <IconButton icon="refresh" label="Reset" onPress={onReset} />
+            <CircleButton onPress={onAddSticker} />
+            <IconButton icon="save-alt" label="Save" onPress={onSaveImageAsync} />
           </View>
         </View>
       ) : (
